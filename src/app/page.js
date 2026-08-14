@@ -1,19 +1,25 @@
-import BackgroundParticles from '@/components/BackgroundParticles';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import WhySection from '@/components/WhySection';
 import PricelistSection from '@/components/PricelistSection';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import Footer from '@/components/Footer';
+import ChannelPopup from '@/components/ChannelPopup';
 
 export default function Home() {
   return (
     <>
-      <BackgroundParticles />
+      <ChannelPopup />
       <Navbar />
-      <HeroSection />
-      <WhySection />
-      <PricelistSection />
+      <div className="page-wrapper">
+        <div className="left-col">
+          <HeroSection />
+        </div>
+        <div className="right-col">
+          <WhySection />
+          <PricelistSection />
+        </div>
+      </div>
       <FloatingWhatsApp />
       <Footer />
     </>

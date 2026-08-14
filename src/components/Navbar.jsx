@@ -31,7 +31,7 @@ export default function Navbar() {
     <>
       <nav className={`navbar${scrolled ? ' scrolled' : ''}`} id="navbar">
         <div className="nav-container">
-          <div className="nav-logo"><span>PremiumApps</span></div>
+          <div className="nav-logo"><span>Zayse App</span></div>
           <div className={`nav-links${menuOpen ? ' mobile-open' : ''}`}>
             <a href="#home" className={`nav-link${activeSection === 'home' ? ' active' : ''}`} onClick={() => setMenuOpen(false)}>Home</a>
             <a href="#pricelist" className={`nav-link${activeSection === 'pricelist' ? ' active' : ''}`} onClick={() => setMenuOpen(false)}>Pricelist</a>
