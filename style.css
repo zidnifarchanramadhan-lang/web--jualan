@@ -909,7 +909,18 @@ a   { text-decoration: none; color: inherit; }
   }
   .nav-links.mobile-open { display: flex; }
   
-  .hero-title { font-size: 1.65rem; }
+  .identity-avatar {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .profile-avatar {
+    width: 50px !important;
+    height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+  }
+  
+  .hero-title { font-size: 1.55rem; }
   .section-title { font-size: 1.35rem; }
   
   .custom-order-banner {

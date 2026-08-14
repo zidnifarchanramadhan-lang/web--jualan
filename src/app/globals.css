@@ -613,8 +613,18 @@ body {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .hero-title { font-size: 1.75rem; }
-  .section-title { font-size: 1.4rem; }
+  .identity-avatar {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .profile-avatar {
+    width: 50px !important;
+    height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+  }
+  .hero-title { font-size: 1.55rem; }
+  .section-title { font-size: 1.35rem; }
   .products-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr 1fr; }
 }
