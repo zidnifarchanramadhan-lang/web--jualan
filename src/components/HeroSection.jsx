@@ -10,8 +10,8 @@ export default function HeroSection() {
         {/* Profile Card */}
         <div className="modern-profile-card" ref={profileCardRef}>
           <div className="profile-header-main">
-            <div className="identity-avatar">
-              <img src="/avatar.jpg" alt="Zayse App" className="profile-avatar" />
+            <div className="identity-avatar" style={{ width: '58px', height: '58px', flexShrink: 0 }}>
+              <img src="/avatar.jpg" alt="Zayse App" className="profile-avatar" style={{ width: '58px', height: '58px', objectFit: 'cover', borderRadius: '50%' }} />
               <div className="online-pulse-ring"></div>
               <div className="online-dot"></div>
             </div>

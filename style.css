@@ -381,14 +381,22 @@ a   { text-decoration: none; color: inherit; }
   margin-bottom: 18px;
 }
 
-.identity-avatar { position: relative; flex-shrink: 0; }
-
-.profile-avatar {
+.identity-avatar { 
+  position: relative; 
+  flex-shrink: 0;
   width: 58px;
   height: 58px;
+}
+
+.profile-avatar {
+  width: 58px !important;
+  height: 58px !important;
+  max-width: 58px !important;
+  max-height: 58px !important;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--text);
+  display: block;
 }
 
 .online-dot {
