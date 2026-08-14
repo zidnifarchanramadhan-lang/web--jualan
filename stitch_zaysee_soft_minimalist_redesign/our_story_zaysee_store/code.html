@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Story - Zaysee Store</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffd9e4",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e3e2de",
+                        "on-surface-variant": "#434841",
+                        "on-primary-fixed-variant": "#354d31",
+                        "on-tertiary-container": "#66404d",
+                        "primary-fixed-dim": "#b3ceab",
+                        "inverse-on-surface": "#f2f1ec",
+                        "inverse-surface": "#30312e",
+                        "on-primary-container": "#3a5135",
+                        "secondary": "#635e56",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#30121e",
+                        "tertiary-fixed-dim": "#ecb9c9",
+                        "on-tertiary-fixed-variant": "#613c49",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#7b5361",
+                        "on-secondary-fixed": "#1e1b16",
+                        "surface-container-low": "#f5f4ef",
+                        "surface-bright": "#faf9f5",
+                        "surface-container": "#efeee9",
+                        "on-background": "#1b1c19",
+                        "secondary-container": "#e6ded5",
+                        "surface-variant": "#e3e2de",
+                        "surface-tint": "#4c6548",
+                        "surface-dim": "#dbdad6",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#4b463f",
+                        "primary-container": "#a8c3a0",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#ceeac5",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#e0aebe",
+                        "on-secondary-container": "#67625a",
+                        "outline": "#747970",
+                        "secondary-fixed-dim": "#cdc5bc",
+                        "inverse-primary": "#b3ceab",
+                        "outline-variant": "#c3c8be",
+                        "on-surface": "#1b1c19",
+                        "on-secondary": "#ffffff",
+                        "primary": "#4c6548",
+                        "secondary-fixed": "#e9e1d8",
+                        "surface-container-high": "#e9e8e4",
+                        "on-primary-fixed": "#0a2009",
+                        "surface": "#faf9f5",
+                        "background": "#faf9f5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #faf9f5; color: #1b1c19; }
+        .soft-minimal-border { border: 1px solid rgba(139, 133, 125, 0.2); }
+        .editorial-image-hover:hover { transform: scale(1.02); transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface-dim full-width top-0 sticky z-50 border-b border-secondary/20 dark:border-secondary-fixed-dim/20 transition-all duration-300" id="top-nav">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-primary dark:text-primary-fixed-dim cursor-pointer transition-all ease-in-out hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<!-- Brand Logo -->
+<a class="font-headline-lg text-headline-lg font-medium text-primary dark:text-primary-fixed-dim tracking-tight" href="#">
+                Zaysee Store
+            </a>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors cursor-pointer transition-all ease-in-out hover:scale-105 transition-transform duration-300" href="#">Shop</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors cursor-pointer transition-all ease-in-out hover:scale-105 transition-transform duration-300" href="#">Collections</a>
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 cursor-pointer transition-all ease-in-out" href="#">Our Story</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors cursor-pointer transition-all ease-in-out hover:scale-105 transition-transform duration-300" href="#">Journal</a>
+</div>
+<!-- Trailing Icons -->
+<div class="flex space-x-4 items-center">
+<button class="text-primary dark:text-primary-fixed-dim cursor-pointer transition-all ease-in-out hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+<button class="text-primary dark:text-primary-fixed-dim cursor-pointer transition-all ease-in-out hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+</button>
+<button class="text-primary dark:text-primary-fixed-dim cursor-pointer transition-all ease-in-out hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24 md:py-32 flex flex-col items-center text-center">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6 max-w-3xl">Curated with intention. Crafted for slow living.</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+                We believe in pieces that tell a story, materials that respect the earth, and designs that endure beyond fleeting seasons. Zaysee Store is a reflection of a quieter, more deliberate approach to style.
+            </p>
+</section>
+<!-- Asymmetric Narrative Block 1 -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 overflow-hidden rounded-lg">
+<img class="w-full h-auto object-cover editorial-image-hover" data-alt="A soft-focus lifestyle photograph of an artisan's hands carefully folding a piece of textured, earth-toned linen fabric on a worn wooden table. Warm, natural window light creates a serene, intentional mood, reflecting slow fashion and craftsmanship in a minimal, airy studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsti7YJ9ogPSFgqlpeghMD4GXwdCZ3wLxH18tU4CqiXebFvQWEIP_dQtdKkiQrdGxk6QHgMZcAJ7LR1agXLn8Vg8ZoykBCthiRXBQTxYIb2_cIb0twO5XxAFzOxr9oovT1x0XDnZV-9QCg7-io0hCLDbJL1XU37EbFb5PT3CrYBNacvXKE6DQTbWFAYU_5m76Gr9HoKORfG02CKyxGpTsxQgswDgeX5B-Fd2QhPW2018Mtv3qZAWHp"/>
+</div>
+<div class="md:col-span-4 md:col-start-9 flex flex-col justify-center space-y-6 mt-8 md:mt-0">
+<h2 class="font-headline-md text-headline-md text-on-surface">The Origins of Calm</h2>
+<p class="font-body-md text-body-md text-secondary">
+                        It started with a simple desire: to reduce the noise. In a world of fast consumption, we sought objects that brought a sense of pause. Our journey began by partnering with independent makers who share our reverence for raw materials and unhurried processes.
+                    </p>
+<p class="font-body-md text-body-md text-secondary">
+                        Every piece in our collection is selected not just for its aesthetic, but for the integrity of its creation. We favor organic textures, subdued palettes, and silhouettes that offer comfort without sacrificing elegance.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Full Width Impact Image -->
+<section class="w-full py-16 md:py-24">
+<div class="w-full h-[60vh] bg-surface-container-high relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center editorial-image-hover" data-alt="A wide, cinematic shot of a beautifully sparse, sunlit living space. A single, elegantly draped organic cotton garment hangs delicately on a minimal wooden rack against a textured plaster wall. Soft, diffuse morning light casts gentle shadows, evoking a sense of calm, slow living, and refined simplicity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-EgjA4P_KBizyfjbE-DNLo49KZk3E9Mp1tKfRK2atL-dllf9ALH8uKGk0sqgjLBgxBcJ4tRpdsWiweQlwxLlPdn4u_7M9GdEZVd-D7iLz_ywHQJLqtbZeOS3oykl86QvC9-PiUnLnnQFJNAD2jBVELFpYufKhX5WVFUOEqulISmEtapXjev29qlswy2Nv9KGPVvp5UYeb8kbB6hHa4xnPj_PcwrRi9Qqg7Wufqmio2JUpEZL-h2RA')"></div>
+</div>
+</section>
+<!-- Asymmetric Narrative Block 2 (Reversed) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-4 flex flex-col justify-center space-y-6 order-2 md:order-1 mt-8 md:mt-0">
+<h2 class="font-headline-md text-headline-md text-on-surface">Sustainable by Design</h2>
+<p class="font-body-md text-body-md text-secondary">
+                        True sustainability is about longevity. We champion the concept of a modular, enduring wardrobe. By focusing on versatile staples constructed with care, we hope to encourage a shift away from disposable trends.
+                    </p>
+<div class="pt-4">
+<a class="inline-block bg-primary-container text-on-primary-container px-6 py-3 rounded-lg font-label-md text-label-md hover:brightness-95 transition-all" href="#">Explore Our Materials</a>
+</div>
+</div>
+<div class="md:col-span-7 md:col-start-6 overflow-hidden rounded-lg order-1 md:order-2">
+<img class="w-full h-[70vh] object-cover editorial-image-hover" data-alt="A close-up, highly detailed image of sustainable textile fibers—hemp and organic cotton—interwoven in a subtle, earthy weave. The lighting is soft and directional, highlighting the natural imperfections and tactile quality of the fabric, embodying an ethos of conscious creation and environmental respect." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG7eMnch1NMDqqZ9XqR8Zc5wXcA0lZvxGX9gqY2W0Ss6NyNoYJqflrMbqxpaCYOFgbl0sQxyDtaGYJ55o4lKjb7Ngygg9K9Ps7c5UTKiLRKUS1XEibwDKYLd8SJnky3jqf4RixAtR08TqR9a-TQFgDyMhcyrCoVYiyPZ848Gfnl282ca48Dt4H5aaGHFkj8F0clxrUB3Sh1wvlk_W_4VspNHlQsTrUEstNi3nkWf61jSh7VsoN5ROy"/>
+</div>
+</div>
+</section>
+<!-- Values Bento Grid -->
+<section class="bg-surface-container-low py-24 mt-16">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Our Guiding Principles</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl mx-auto">The pillars that inform every curation decision we make.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Value Card 1 -->
+<div class="bg-surface p-8 rounded-lg soft-minimal-border flex flex-col h-full hover:shadow-[0px_10px_30px_rgba(46,44,40,0.04)] transition-shadow duration-300">
+<span class="material-symbols-outlined text-primary mb-6" style="font-size: 32px; font-variation-settings: 'FILL' 0;">eco</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Conscious Sourcing</h3>
+<p class="font-body-md text-body-md text-secondary mt-auto">Prioritizing natural fibers and responsible production methods that minimize environmental impact.</p>
+</div>
+<!-- Value Card 2 -->
+<div class="bg-surface p-8 rounded-lg soft-minimal-border flex flex-col h-full hover:shadow-[0px_10px_30px_rgba(46,44,40,0.04)] transition-shadow duration-300">
+<span class="material-symbols-outlined text-primary mb-6" style="font-size: 32px; font-variation-settings: 'FILL' 0;">handyman</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Artisanal Focus</h3>
+<p class="font-body-md text-body-md text-secondary mt-auto">Partnering with independent makers to preserve traditional craftsmanship and support local economies.</p>
+</div>
+<!-- Value Card 3 -->
+<div class="bg-surface p-8 rounded-lg soft-minimal-border flex flex-col h-full hover:shadow-[0px_10px_30px_rgba(46,44,40,0.04)] transition-shadow duration-300">
+<span class="material-symbols-outlined text-primary mb-6" style="font-size: 32px; font-variation-settings: 'FILL' 0;">hourglass_empty</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Timeless Utility</h3>
+<p class="font-body-md text-body-md text-secondary mt-auto">Designing for longevity over seasonality, creating pieces meant to be worn, loved, and mended over time.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest full-width border-t border-secondary/10 mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+<!-- Brand & Copyright -->
+<div class="flex flex-col space-y-4">
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Zaysee Store</span>
+<p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim">
+                    © 2024 Zaysee Store. Curated with intention.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="flex flex-col space-y-3 md:col-start-2">
+<a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary transition-all duration-200 hover:opacity-80 transition-opacity" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary transition-all duration-200 hover:opacity-80 transition-opacity" href="#">Sustainability</a>
+</div>
+<!-- Links Column 2 -->
+<div class="flex flex-col space-y-3">
+<a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary transition-all duration-200 hover:opacity-80 transition-opacity" href="#">Stockists</a>
+<a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary transition-all duration-200 hover:opacity-80 transition-opacity" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple script to handle nav background opacity on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('top-nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-[0px_10px_30px_rgba(46,44,40,0.04)]');
+            } else {
+                nav.classList.remove('shadow-[0px_10px_30px_rgba(46,44,40,0.04)]');
+            }
+        });
+    </script>
+</body></html>

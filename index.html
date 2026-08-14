@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <script>
+    (function(){
+      var p=new URLSearchParams(window.location.search);
+      var t=parseInt(p.get('_t'),10)||0;
+      var now=Math.floor(Date.now()/300000);
+      if(t!==now){p.set('_t',now);window.location.replace(window.location.pathname+'?'+p.toString()+window.location.hash);}
+      
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="description" content="Jual aplikasi premium berkualitas tinggi. Alight Motion, CapCut, Canva Pro. Fast response, original & bergaransi." />
+  <title>Zayse App Premium | Solusi Digital Terbaik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" id="mainCSS" href="style.css?v=6.0" />
+  <script>
+    (function(){var c=document.getElementById('mainCSS');if(c)c.href='style.css?v=6.0&t='+Date.now();})();
+
+    var CHANNEL_URL = 'https://whatsapp.com/channel/0029VbD7l0zHrDZZWH71il2C';
+
+    function initChannelPopup() {
+      var o = document.getElementById('channelPopOverlay');
+      if (o) o.classList.add('active');
+    }
+
+    function closeChannelPopup(redirect) {
+      var o = document.getElementById('channelPopOverlay');
+      if (o) o.classList.remove('active');
+      if (redirect) window.open(CHANNEL_URL, '_blank');
+    }
+  </script>
+</head>
+<body>
+
+  <!-- ═══ WHATSAPP CHANNEL WELCOME POPUP ═══ -->
+  <div class="channel-pop-overlay" id="channelPopOverlay" role="dialog" aria-modal="true">
+    <div class="channel-pop-box">
+      <button class="channel-pop-close-x" onclick="closeChannelPopup(false)" aria-label="Tutup">✕</button>
+      <div class="channel-pop-badge">
+        <span class="badge-icon">🎁</span> SPECIAL BONUS
+      </div>
+      <h3 class="channel-pop-title">AM Free Generate + Free APIKey AM</h3>
+      <p class="channel-pop-desc">
+        Gabung ke <strong>Saluran WhatsApp Resmi</strong> kami sekarang untuk mendapatkan <strong>AM Free Generate</strong> &amp; <strong>Free APIKey AM</strong> secara gratis!
+      </p>
+      <button class="channel-pop-btn" onclick="closeChannelPopup(true)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Masuk Saluran WhatsApp →
+      </button>
+      <button class="channel-pop-skip" onclick="closeChannelPopup(false)">Nanti Saja</button>
+    </div>
+  </div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><span>Zayse App</span></div>
+      <div class="nav-links" id="navLinks">
+        <a href="#home"      class="nav-link active" id="navHome">Home</a>
+        <a href="#pricelist" class="nav-link"        id="navPricelist">Pricelist</a>
+      </div>
+      <div class="nav-right-actions">
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Ganti Tema" title="Ganti Tema">
+          <span id="themeIcon">🌙</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- ═══ PAGE WRAPPER — two-column on desktop ═══ -->
+  <div class="page-wrapper">
+
+    <!-- ╔══════════════════════════════╗
+         ║  LEFT COL — Hero + sidebar  ║
+         ╚══════════════════════════════╝ -->
+    <div class="left-col">
+
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="hero-container">
+
+          <!-- Modern Profile & Stats Card -->
+          <div class="modern-profile-card">
+            <div class="profile-header-main">
+              <div class="identity-avatar">
+                <img src="avatar.jpg" alt="Zayse App" class="profile-avatar" id="profileAvatar" />
+                <div class="online-pulse-ring"></div>
+                <div class="online-dot"></div>
+              </div>
+              <div class="identity-info">
+                <div class="profile-title-wrapper">
+                  <h2 class="profile-name">ZAYSE APP PREMIUM</h2>
+                  <span class="verified-badge" title="Terverifikasi">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="12" r="10" fill="#4c6548"/>
+                      <path d="M8.5 12.5L10.8 14.8L15.5 9.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </div>
+                <p class="profile-tagline">Spesialis Aplikasi Premium &amp; AI</p>
+              </div>
+            </div>
+
+            <!-- Modern 3-Stat Grid -->
+            <div class="modern-stats-grid">
+              <div class="stat-card">
+                <span class="stat-icon">📦</span>
+                <div class="stat-content">
+                  <span class="stat-number">100+</span>
+                  <span class="stat-label">Aplikasi</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <span class="stat-icon">👥</span>
+                <div class="stat-content">
+                  <span class="stat-number">500+</span>
+                  <span class="stat-label">Pembeli</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <span class="stat-icon">⭐</span>
+                <div class="stat-content">
+                  <span class="stat-number">4.9</span>
+                  <span class="stat-label">Rating</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Editorial headline -->
+          <div class="hero-editorial">
+            <div class="hero-eyebrow">
+              <span class="pulse-dot"></span>
+              Garansi Full · Aktivasi 5-10 Menit
+            </div>
+
+            <h1 class="hero-title">
+              Aplikasi Premium <br>
+              <span class="gradient-text">Original &amp; Bergaransi</span>
+            </h1>
+
+            <p class="hero-desc">
+              Solusi akun premium Alight Motion, CapCut Pro, Canva, &amp; Gemini Advanced dengan harga terjangkau dan garansi resmi.
+            </p>
+
+            <div class="features-grid">
+              <div class="feature-chip"><span class="chip-icon"></span> Aktivasi Cepat</div>
+              <div class="feature-chip"><span class="chip-icon"></span> 100% Aman</div>
+              <div class="feature-chip"><span class="chip-icon"></span> Original</div>
+              <div class="feature-chip"><span class="chip-icon"></span> Garansi</div>
+            </div>
+
+            <div class="cta-group">
+              <a href="#pricelist" class="btn-primary" id="ctaPrimary" onclick="return handleCtaClick(event)">
+                Lihat Pricelist
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="https://wa.me/6281919525274" class="btn-secondary" id="ctaWhatsApp" target="_blank" rel="noopener">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+              </a>
+              <a href="https://whatsapp.com/channel/0029VbDXk4aBqbr6S5zzyt18" class="btn-testi" id="ctaTesti" target="_blank" rel="noopener">⭐ Testimoni</a>
+              <a href="https://www.tiktok.com/@zayse_app" class="btn-tiktok" id="ctaTikTok" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.42a8.16 8.16 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.85z"/></svg>
+                TikTok
+              </a>
+            </div>
+          </div>
+
+          <a href="#pricelist" class="scroll-indicator" onclick="return handleCtaClick(event)">
+            <span>Scroll ke pricelist</span>
+            <div class="scroll-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </div><!-- /left-col -->
+
+    <!-- ╔══════════════════════════════╗
+         ║  RIGHT COL — Content        ║
+         ╚══════════════════════════════╝ -->
+    <div class="right-col">
+
+      <!-- WHY SECTION -->
+      <section class="why-section">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-eyebrow">Keunggulan Toko</span>
+            <h2 class="section-title">Mengapa Belanja di Zayse App?</h2>
+          </div>
+          <div class="why-grid">
+            <div class="why-card" id="whyCard1">
+              <div class="why-icon"></div>
+              <h3>Garansi Full</h3>
+              <p>Jaminan ganti akun baru jika terjadi kendala selama masa garansi aktif.</p>
+            </div>
+            <div class="why-card" id="whyCard2">
+              <div class="why-icon"></div>
+              <h3>Proses 5-10 Menit</h3>
+              <p>Aktivasi cepat dan tanpa ribet, akun langsung siap Anda gunakan.</p>
+            </div>
+            <div class="why-card" id="whyCard3">
+              <div class="why-icon"></div>
+              <h3>100% Original</h3>
+              <p>Lisensi resmi &amp; aman tanpa risiko terblokir atau APK modifikasi.</p>
+            </div>
+            <div class="why-card" id="whyCard4">
+              <div class="why-icon"></div>
+              <h3>Dukungan 24 Jam</h3>
+              <p>Customer service aktif siap membantu dan menjawab pertanyaan Anda.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICELIST -->
+      <section class="pricelist-section" id="pricelist">
+        <div class="section-container">
+
+          <div class="section-header" style="margin-top:36px;">
+            <span class="section-eyebrow">Pricelist Lengkap</span>
+            <h2 class="section-title">Pilih Paket Terbaik</h2>
+            <p class="page-hero-desc" style="margin-top:6px;">Semua produk original, bergaransi resmi, siap pakai.</p>
+          </div>
+
+          <!-- Tabs -->
+          <div class="tab-buttons" id="tabButtons">
+            <button class="tab-btn active" id="tabAll"          onclick="filterCategory('all')">Semua Produk</button>
+            <button class="tab-btn"        id="tabVideo"        onclick="filterCategory('video')">Video Editing</button>
+            <button class="tab-btn"        id="tabDesign"       onclick="filterCategory('design')">Desain</button>
+            <button class="tab-btn"        id="tabProductivity" onclick="filterCategory('productivity')">Produktivitas &amp; AI</button>
+          </div>
+
+          <!-- Products -->
+          <div class="products-grid" id="productsGrid">
+
+            <!-- Alight Motion -->
+            <div class="product-card featured" data-category="video" id="cardAlightMotion">
+              <div class="card-icon-img">
+                <img src="alight_motion.png" alt="Alight Motion" class="app-logo-img" />
+              </div>
+              <div class="card-body">
+                <div class="card-top">
+                  <div class="card-name-group">
+                    <div class="card-category">Video Editing</div>
+                    <div class="card-title">Alight Motion Pro</div>
+                  </div>
+                  <span class="card-badge">🔥 Hot</span>
+                </div>
+                <p class="card-desc">Edit video &amp; animasi profesional. Efek motion graphics, keyframe animation, tanpa watermark, export HD. Full garansi 1 tahun.</p>
+                <div class="card-footer">
+                  <div class="price-group">
+                    <span class="price-main">Rp 4.000</span>
+                    <span class="price-period">/Thn</span>
+                    <del class="price-original">Rp 10.000</del>
+                  </div>
+                  <a href="https://wa.me/6281919525274?text=Halo%2C%20saya%20mau%20order%20ALight%20Motion%20Pro"
+                     class="btn-order" id="orderAlightMotion" target="_blank" rel="noopener">Order →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CapCut Pro 7 Hari -->
+            <div class="product-card featured" data-category="video" id="cardCapCut7Hari">
+              <div class="card-icon-img">
+                <img src="capcut.png" alt="CapCut Pro 7 Hari" class="app-logo-img capcut-logo" />
+              </div>
+              <div class="card-body">
+                <div class="card-top">
+                  <div class="card-name-group">
+                    <div class="card-category">Video Editing</div>
+                    <div class="card-title">CapCut Pro 7 Hari</div>
+                  </div>
+                  <span class="card-badge">🔥 Hot</span>
+                </div>
+                <p class="card-desc">Edit video viral dari ByteDance. Template premium, efek trending, fitur AI canggih, tanpa watermark, export HD/4K. Masa aktif 7 Hari.</p>
+                <div class="card-footer">
+                  <div class="price-group">
+                    <span class="price-main">Rp 8.000</span>
+                    <span class="price-period">/7 Hari</span>
+                  </div>
+                  <a href="https://wa.me/6281919525274?text=Halo%2C%20saya%20mau%20order%20CapCut%20Pro%207%20Hari%208k"
+                     class="btn-order" id="orderCapCut7Hari" target="_blank" rel="noopener">Order →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CapCut Pro 1 Bulan -->
+            <div class="product-card featured" data-category="video" id="cardCapCut">
+              <div class="card-icon-img">
+                <img src="capcut.png" alt="CapCut Pro 1 Bulan" class="app-logo-img capcut-logo" />
+              </div>
+              <div class="card-body">
+                <div class="card-top">
+                  <div class="card-name-group">
+                    <div class="card-category">Video Editing</div>
+                    <div class="card-title">CapCut Pro 1 Bulan</div>
+                  </div>
+                  <span class="card-badge">🔥 Hot</span>
+                </div>
+                <p class="card-desc">Edit video viral dari ByteDance. Template premium, efek trending, fitur AI canggih, tanpa watermark, export HD/4K. Akun pribadi masa aktif 1 Bulan.</p>
+                <div class="card-footer">
+                  <div class="price-group">
+                    <span class="price-main">Rp 21.000</span>
+                    <span class="price-period">/Bln</span>
+                  </div>
+                  <a href="https://wa.me/6281919525274?text=Halo%2C%20saya%20mau%20order%20CapCut%20Pro%201%20Bulan%2021k"
+                     class="btn-order" id="orderCapCut" target="_blank" rel="noopener">Order →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Wink -->
+            <div class="product-card featured" data-category="productivity" id="cardWink">
+              <div class="card-icon-img">
+                <img src="wink.png" alt="Wink" class="app-logo-img" />
+              </div>
+              <div class="card-body">
+                <div class="card-top">
+                  <div class="card-name-group">
+                    <div class="card-category">Kecantikan</div>
+                    <div class="card-title">Wink Premium</div>
+                  </div>
+                  <span class="card-badge">🔥 Hot</span>
+                </div>
+                <p class="card-desc">Editing foto &amp; video kecantikan terbaik. Retouch wajah AI, semua filter premium, tanpa watermark, export HD.</p>
+                <div class="card-footer">
+                  <div class="price-group">
+                    <span class="price-main">Rp 5.000</span>
+                    <span class="price-period">/Mgg</span>
+                  </div>
+                  <a href="https://wa.me/6281919525274?text=Halo%2C%20saya%20mau%20order%20Wink%20Premium"
+                     class="btn-order" id="orderWink" target="_blank" rel="noopener">Order →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Canva Pro 1 Bulan -->
+            <div class="product-card featured" data-category="design" id="cardCanva">
+              <div class="card-icon-img">
+                <img src="canva.png" alt="Canva Pro" class="app-logo-img canva-logo" />
+              </div>
+              <div class="card-body">
+                <div class="card-top">
+                  <div class="card-name-group">
+                    <div class="card-category">Design</div>
+                    <div class="card-title">Canva Pro 1 Bulan</div>
+                  </div>
+                  <span class="card-badge">⚡ Best</span>
+                </div>
+                <p class="card-desc">100+ juta template premium, Background Remover, Brand Kit, Magic Resize &amp; Magic Write AI, 100GB Cloud Storage. Masa aktif 1 Bulan.</p>
+                <div class="card-footer">
+                  <div class="price-group">
+                    <span class="price-main">Rp 3.000</span>
+                    <span class="price-period">/Bln</span>
+                  </div>
+                  <a href="https://wa.me/6281919525274?text=Halo%2C%20saya%20mau%20order%20Canva%20Pro%201%20Bulan%203k"
+                     class="btn-order" id="orderCanva" target="_blank" rel="noopener">Order →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Canva Pro 1 Tahun -->
+            <div class="product-card featured" data-category="design" id="cardCanva1Tahun">
+              <div class="card-icon-img">
+                <img src="canva.png" alt="Canva Pro 1 Tahun" class="app-logo-img canva-logo" />
+              </div>
+              <div class="card-body">
+                <div class="card-top">
+                  <div class="card-name-group">
+                    <div class="card-category">Design</div>
+                    <div class="card-title">Canva Pro 1 Tahun</div>
+                  </div>
+                  <span class="card-badge">⚡ Hemat</span>
+                </div>
+                <p class="card-desc">100+ juta template premium, Background Remover, Brand Kit, Magic Resize &amp; Magic Write AI, 100GB Cloud Storage. Full garansi 1 Tahun.</p>
+                <div class="card-footer">
+                  <div class="price-group">
+                    <span class="price-main">Rp 12.000</span>
+                    <span class="price-period">/Thn</span>
+                    <del class="price-original">Rp 45.000</del>
+                  </div>
+                  <a href="https://wa.me/6281919525274?text=Halo%2C%20saya%20mau%20order%20Canva%20Pro%201%20Tahun%2012k"
+                     class="btn-order" id="orderCanva1Tahun" target="_blank" rel="noopener">Order →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Canva Education Lifetime -->
+            <div class="product-card featured" data-category="design" id="cardCanvaLifetime">
+              <div class="card-icon-img">
+                <img src="canva.png" alt="Canva Education Lifetime" class="app-logo-img canva-logo" />
+              </div>
+              <div class="card-body">
+                <div class="card-top">
+                  <div class="card-name-group">
+                    <div class="card-category">Design</div>
+                    <div class="card-title">Canva Education Lifetime</div>
+                  </div>
+                  <span class="card-badge">🔥 Lifetime</span>
+                </div>
+                <p class="card-desc">100+ juta template premium, Background Remover, Magic Resize &amp; Magic Write AI, 100GB Cloud Storage. Akses Lifetime (Garansi 6 Bulan). ⚠️ Catatan: Tidak bisa fitur Desainer / Brand Kit.</p>
+                <div class="card-footer">
+                  <div class="price-group">
+                    <span class="price-main">Rp 17.000</span>
+                    <span class="price-period">/Lifetime</span>
+                    <del class="price-original">Rp 95.000</del>
+                  </div>
+                  <a href="https://wa.me/6281919525274?text=Halo%2C%20saya%20mau%20order%20Canva%20Education%20Lifetime%2017k%20Garansi%206%20Bulan"
+                     class="btn-order" id="orderCanvaLifetime" target="_blank" rel="noopener">Order →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gemini Advanced Pro -->
+            <div class="product-card featured" data-category="productivity" id="cardGemini">
+              <div class="card-icon-img">
+                <img src="gemini.png" alt="Google Gemini Advanced Pro" class="app-logo-img" />
+              </div>
+              <div class="card-body">
+                <div class="card-top">
+                  <div class="card-name-group">
+                    <div class="card-category">Produktivitas &amp; AI</div>
+                    <div class="card-title">Google Gemini Advanced Pro</div>
+                  </div>
+                  <span class="card-badge">⚡ Promo AI</span>
+                </div>
+                <p class="card-desc">Asisten AI tercanggih Google. Model Gemini 1.5 Pro, analisis dokumen &amp; koding kompleks, integrasi Google Workspace. Masa aktif 18 Bulan full garansi.</p>
+                <div class="card-footer">
+                  <div class="price-group">
+                    <span class="price-main">Rp 20.000</span>
+                    <span class="price-period">/18 Bln</span>
+                    <del class="price-original">Rp 300.000</del>
+                  </div>
+                  <a href="https://wa.me/6281919525274?text=Halo%2C%20saya%20mau%20order%20Google%20Gemini%20Advanced%20Pro%2018%20Bulan"
+                     class="btn-order" id="orderGemini" target="_blank" rel="noopener">Order →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Viu Lifetime -->
+            <div class="product-card featured" data-category="video" id="cardViu">
+              <div class="card-icon-img">
+                <img src="viu.png" alt="Viu Premium" class="app-logo-img" />
+              </div>
+              <div class="card-body">
+                <div class="card-top">
+                  <div class="card-name-group">
+                    <div class="card-category">Video &amp; Streaming</div>
+                    <div class="card-title">Viu Premium Lifetime</div>
+                  </div>
+                  <span class="card-badge">🔥 Lifetime</span>
+                </div>
+                <p class="card-desc">Nonton Drama Korea, Anime, &amp; Film Asia tanpa iklan. Akses fitur Premium Lifetime (Seumur Hidup) full garansi.</p>
+                <div class="card-footer">
+                  <div class="price-group">
+                    <span class="price-main">Rp 4.000</span>
+                    <span class="price-period">/Lifetime</span>
+                  </div>
+                  <a href="https://wa.me/6281919525274?text=Halo%2C%20saya%20mau%20order%20Viu%20Lifetime%204k"
+                     class="btn-order" id="orderViu" target="_blank" rel="noopener">Order →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Getcontact Premium -->
+            <div class="product-card featured" data-category="productivity" id="cardGetcontact">
+              <div class="card-icon-img">
+                <img src="getcontact.png" alt="Getcontact Premium" class="app-logo-img" />
+              </div>
+              <div class="card-body">
+                <div class="card-top">
+                  <div class="card-name-group">
+                    <div class="card-category">Produktivitas</div>
+                    <div class="card-title">Getcontact Premium</div>
+                  </div>
+                  <span class="card-badge">⚡ Premium</span>
+                </div>
+                <p class="card-desc">Identifikasi nomor tak dikenal, proteksi dari panggilan spam &amp; penipuan, serta lihat tag nomor telepon secara anonim. Masa aktif 1 Bulan full garansi.</p>
+                <div class="card-footer">
+                  <div class="price-group">
+                    <span class="price-main">Rp 10.000</span>
+                    <span class="price-period">/Bln</span>
+                  </div>
+                  <a href="https://wa.me/6281919525274?text=Halo%2C%20saya%20mau%20order%20Getcontact%20Premium%201%20Bulan"
+                     class="btn-order" id="orderGetcontact" target="_blank" rel="noopener">Order →</a>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /products-grid -->
+
+          <!-- Custom Order Banner -->
+          <div class="custom-order-banner" id="customBanner">
+            <div class="custom-order-content">
+              <div class="custom-icon">💬</div>
+              <div class="custom-text">
+                <h3>Tidak menemukan yang Anda cari?</h3>
+                <p>Request aplikasi lainnya — kami siap membantu kapan saja!</p>
+              </div>
+            </div>
+            <a href="https://wa.me/6281919525274?text=Halo%2C%20saya%20mau%20tanya%20tentang%20aplikasi%20premium%20lainnya"
+               class="btn-primary" id="customOrder" target="_blank" rel="noopener">
+              Chat Sekarang
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+    </div><!-- /right-col -->
+  </div><!-- /page-wrapper -->
+
+  <!-- Floating WA -->
+  <a href="https://wa.me/6281919525274" class="wa-float" id="waFloat" target="_blank" rel="noopener" title="Chat WhatsApp">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-label">Order via WA</span>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo"><span>Zayse App</span></div>
+      <p class="footer-text">© 2026 Zayse App Premium. All rights reserved.</p>
+      <div class="footer-contact">
+        <a href="https://wa.me/6281919525274" target="_blank" rel="noopener" class="footer-wa">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          6281919525274
+        </a>
+        <a href="https://www.tiktok.com/@zayse_app" target="_blank" rel="noopener" class="footer-tiktok">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.42a8.16 8.16 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.85z"/></svg>
+          @zayse_app
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){var s=document.createElement('script');s.src='script.js?v=6.0&t='+Date.now();document.body.appendChild(s);})();
+    window.addEventListener('load',function(){setTimeout(initChannelPopup,500);});
+  </script>
+
+</body>
+</html>

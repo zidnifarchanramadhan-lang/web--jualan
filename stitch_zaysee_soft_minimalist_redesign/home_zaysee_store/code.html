@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zaysee Store - Curated with intention.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed": "#ffd9e4",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e3e2de",
+                        "on-surface-variant": "#434841",
+                        "on-primary-fixed-variant": "#354d31",
+                        "on-tertiary-container": "#66404d",
+                        "primary-fixed-dim": "#b3ceab",
+                        "inverse-on-surface": "#f2f1ec",
+                        "inverse-surface": "#30312e",
+                        "on-primary-container": "#3a5135",
+                        "secondary": "#635e56",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#30121e",
+                        "tertiary-fixed-dim": "#ecb9c9",
+                        "on-tertiary-fixed-variant": "#613c49",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#7b5361",
+                        "on-secondary-fixed": "#1e1b16",
+                        "surface-container-low": "#f5f4ef",
+                        "surface-bright": "#faf9f5",
+                        "surface-container": "#efeee9",
+                        "on-background": "#1b1c19",
+                        "secondary-container": "#e6ded5",
+                        "surface-variant": "#e3e2de",
+                        "surface-tint": "#4c6548",
+                        "surface-dim": "#dbdad6",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#4b463f",
+                        "primary-container": "#a8c3a0",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#ceeac5",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#e0aebe",
+                        "on-secondary-container": "#67625a",
+                        "outline": "#747970",
+                        "secondary-fixed-dim": "#cdc5bc",
+                        "inverse-primary": "#b3ceab",
+                        "outline-variant": "#c3c8be",
+                        "on-surface": "#1b1c19",
+                        "on-secondary": "#ffffff",
+                        "primary": "#4c6548",
+                        "secondary-fixed": "#e9e1d8",
+                        "surface-container-high": "#e9e8e4",
+                        "on-primary-fixed": "#0a2009",
+                        "surface": "#faf9f5",
+                        "background": "#faf9f5"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px"
+                    },
+                    fontFamily: {
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"]
+                    },
+                    fontSize: {
+                        "label-md": ["14px", { lineHeight: "1.4", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "1.2", fontWeight: "500" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "500" }],
+                        "headline-lg": ["32px", { lineHeight: "1.2", letterSpacing: "0.01em", fontWeight: "500" }],
+                        "display-lg": ["48px", { lineHeight: "1.1", letterSpacing: "0.02em", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }]
+                    },
+                    boxShadow: {
+                        'ambient': '0px 10px 30px rgba(46, 44, 40, 0.04)',
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .nav-border {
+            border-bottom: 1px solid rgba(139, 133, 125, 0.2);
+        }
+        .card-border {
+            border: 1px solid rgba(139, 133, 125, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface-dim full-width top-0 sticky z-50">
+<div class="nav-border">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-headline-lg text-headline-lg font-medium text-primary dark:text-primary-fixed-dim shrink-0" href="#">
+<img alt="Zaysee Store Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhb0NkgJl7viWISXRYwiISbTcaOgLko2qda0uMMf7R1Sq7asEehzUpe0qQb0a-tPpov-3cLkH0E-vr681KFheuW-NNOFnjSiONA6yghspYHVGOExr3fM3zZS97zEpdrjRCUi8i_bNd2z9gwGsjWp3-5LygegyYqBQHevGnsIPtE_RdFGGzFeVolOSIb1eLmp7MCyNQ2P6miG80wW6M-ERGpng7WOah7xsoFhkitkmUrH5wBXyLLJqn"/>
+</a>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 cursor-pointer transition-all ease-in-out" href="#">Shop</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors cursor-pointer transition-all ease-in-out hover:scale-105 duration-300" href="#">Collections</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors cursor-pointer transition-all ease-in-out hover:scale-105 duration-300" href="#">Our Story</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors cursor-pointer transition-all ease-in-out hover:scale-105 duration-300" href="#">Journal</a>
+</div>
+</div>
+<div class="flex items-center gap-4 text-primary dark:text-primary-fixed-dim">
+<button class="hover:scale-105 transition-transform duration-300 cursor-pointer p-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+</button>
+<button class="hover:scale-105 transition-transform duration-300 cursor-pointer p-2 relative">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+<span class="absolute top-1 right-1 bg-primary-container text-on-primary-container text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24 md:py-32 flex flex-col md:flex-row items-center gap-gutter">
+<div class="w-full md:w-1/2 flex flex-col items-start space-y-8 pr-0 md:pr-12">
+<span class="font-label-md text-label-md text-secondary bg-primary-container/15 px-4 py-1 rounded-full">New Arrivals</span>
+<h1 class="font-display-lg text-display-lg text-on-surface">Curated goods for a mindful life.</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-md">Discover our latest collection of thoughtfully designed pieces that bring calm and beauty to your everyday spaces.</p>
+<a class="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary transition-colors duration-300 px-8 py-4 rounded-lg font-label-md text-label-md" href="#shop">Explore Collection</a>
+</div>
+<div class="w-full md:w-1/2 mt-12 md:mt-0 relative aspect-[4/5] md:aspect-square overflow-hidden rounded-xl shadow-ambient">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A soft, beautifully lit interior scene showing a beautifully crafted ceramic vase on a natural wood table, bathed in warm afternoon sunlight filtering through a linen curtain. The overall aesthetic is soft minimal, organic, and calm, using earthy tones and high-key lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1OjPvWa7nk8uLFvYh4pODiHjy_U85zC86wF_3j3IQaYfOhbNZYhYvW2L737IkCIbl3EXvZw798wNZ52zt94-c_F2LXXNnKDl__ITIU2McPrIG-3xqH9FCdYym0ETCqWVxS1tOJEwhzK5pZbkKM7D7LtMGy6uzHO0li8I3YjLs-dDw238ltFQAAQ1nW3p_4CmlaVMx-aSxJhRicFOFW2nvkQ-JMhn8WqW6qvqYJu6G7CdSk2DUqfmY"/>
+</div>
+</section>
+<!-- Asymmetric Featured Collection -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24" id="shop">
+<div class="flex justify-between items-end mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Featured Objects</h2>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container transition-colors hidden md:block" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Item -->
+<div class="md:col-span-7 group cursor-pointer">
+<div class="aspect-[4/3] bg-surface-container-low rounded-lg overflow-hidden mb-6">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A close-up shot of a hand-poured, natural soy wax candle in a textured, muted green ceramic vessel resting on a raw linen cloth. The lighting is soft and natural, emphasizing the artisanal craftsmanship and soft minimal aesthetic of the product." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuDgDuQY3yGUe1qW_d0lGTHVKZGTBncx1tLT3q8ypcesKLGtuWEcNZF6hmC2YvfJjc1AEfMIDwg0NIXaqmDtn_fviXFJpRNKsk2IjFQHFAqhI_3qDOSAJGCausL9rGF2cO-y0BYjMm3wcBv7WgqX5clX8nA0YPPF3IQudvw4T3iA377xPFOjg31j5-HmV-M9uMwOSCgFqJkJfuADVtkUblDW4NSQEhzuY3Ik4jLq6U-Y41zo2-BNZ9"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Botanical Candle</h3>
+<p class="font-body-md text-body-md text-secondary">$45.00</p>
+</div>
+<div class="md:col-span-5 grid grid-cols-1 gap-gutter mt-8 md:mt-0">
+<!-- Small Item 1 -->
+<div class="group cursor-pointer md:mt-16">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A minimalist woven storage basket made from natural sea grass, placed on a light oak wooden floor against a soft off-white wall. The lighting is airy and bright, reflecting a calm, organized, and curated lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7k3XONJWNM-jtEoRht2-gaqIQmKRQ_b3Ua8F4W-6E0JyuWZlEupBlLFVKnNi4cCHpWxqiIUHSmXxbwbpY_KdzFEgzNqN0Cc02WRGI2gHOyTWYMY24xtt2cINVxxpH333lWUHxHAqpXEALMruBhOWKtIvOBO_vDBQUcsCSl29GzAjlySIk7C26YNkiWtV1k1wcfgMIqVMwQnNp7hEAp0mMFqmtQsFRYGN8kir9x9Zo9zYYJX6Jc9i-"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 text-xl">Woven Basket</h3>
+<p class="font-body-md text-body-md text-secondary">$68.00</p>
+</div>
+<!-- Small Item 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A stack of two beautifully bound linen journals in soft beige and muted sage green colors, sitting on a smooth stone surface. Soft shadows cast by indirect natural light create a serene, editorial, and tactile feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIWUqFfW6s9YI3QYLLH-d7_cu_9bP_HkuREY10LT1XKTW2U_ZSlD4QED3VlDQDd7OTthuq995k0nuOdzkcX2DHkr8-qlY-vYNAMPLq82_u2e7jAKxR1mHb6dRCbfJVavar8Aev3bDkB4BBoAEKrG-3yIEA2MI323m6OvpYmpV22lm6me6rcx3ReDm7-n6j2p5LeTbQOgDPTakAIuIUwwQFYJpsrPMBjJ6SdPRSsBamsXiIHPEtqTHE"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 text-xl">Linen Journal Set</h3>
+<p class="font-body-md text-body-md text-secondary">$32.00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Philosophy -->
+<section class="bg-surface-container-low py-32 px-margin-mobile md:px-margin-desktop mt-12">
+<div class="max-w-3xl mx-auto text-center">
+<span class="material-symbols-outlined text-primary mb-6" style="font-size: 32px; font-variation-settings: 'FILL' 0;">eco</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Intention in every detail.</h2>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed mb-10">We believe in surrounding ourselves with objects that have a story. Every piece in our collection is selected for its craftsmanship, sustainability, and ability to bring quiet joy to your daily routines. We reject the rushed in favor of the timeless.</p>
+<a class="inline-block border border-outline border-opacity-40 text-on-surface hover:bg-outline hover:bg-opacity-5 transition-all duration-300 px-6 py-3 rounded-lg font-label-md text-label-md" href="#">Read Our Story</a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest full-width">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Zaysee Store</span>
+<p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim max-w-xs">Curated objects for a softer, more intentional way of living.</p>
+</div>
+<div class="flex flex-col gap-3 md:col-start-3">
+<a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary hover:opacity-80 transition-all duration-200" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary hover:opacity-80 transition-all duration-200" href="#">Sustainability</a>
+<a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary hover:opacity-80 transition-all duration-200" href="#">Stockists</a>
+<a class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary hover:opacity-80 transition-all duration-200" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="border-t border-secondary/10 px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim text-sm text-center md:text-left">© 2024 Zaysee Store. Curated with intention.</p>
+</div>
+</footer>
+</body></html>

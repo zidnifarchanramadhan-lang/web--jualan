@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zaysee Store - Collections</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#ffd9e4",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-highest": "#e3e2de",
+                      "on-surface-variant": "#434841",
+                      "on-primary-fixed-variant": "#354d31",
+                      "on-tertiary-container": "#66404d",
+                      "primary-fixed-dim": "#b3ceab",
+                      "inverse-on-surface": "#f2f1ec",
+                      "inverse-surface": "#30312e",
+                      "on-primary-container": "#3a5135",
+                      "secondary": "#635e56",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed": "#30121e",
+                      "tertiary-fixed-dim": "#ecb9c9",
+                      "on-tertiary-fixed-variant": "#613c49",
+                      "on-error-container": "#93000a",
+                      "tertiary": "#7b5361",
+                      "on-secondary-fixed": "#1e1b16",
+                      "surface-container-low": "#f5f4ef",
+                      "surface-bright": "#faf9f5",
+                      "surface-container": "#efeee9",
+                      "on-background": "#1b1c19",
+                      "secondary-container": "#e6ded5",
+                      "surface-variant": "#e3e2de",
+                      "surface-tint": "#4c6548",
+                      "surface-dim": "#dbdad6",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed-variant": "#4b463f",
+                      "primary-container": "#a8c3a0",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "primary-fixed": "#ceeac5",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#e0aebe",
+                      "on-secondary-container": "#67625a",
+                      "outline": "#747970",
+                      "secondary-fixed-dim": "#cdc5bc",
+                      "inverse-primary": "#b3ceab",
+                      "outline-variant": "#c3c8be",
+                      "on-surface": "#1b1c19",
+                      "on-secondary": "#ffffff",
+                      "primary": "#4c6548",
+                      "secondary-fixed": "#e9e1d8",
+                      "surface-container-high": "#e9e8e4",
+                      "on-primary-fixed": "#0a2009",
+                      "surface": "#faf9f5",
+                      "background": "#faf9f5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "container-max": "1280px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .image-container {
+            overflow: hidden;
+        }
+        .image-container img {
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+        .filter-border-bottom {
+            border-bottom: 1px solid rgba(139, 133, 125, 0.2);
+        }
+        .product-card-border {
+            border: 1px solid rgba(139, 133, 125, 0);
+            transition: border-color 0.3s ease;
+        }
+        .product-card-border:hover {
+            border-color: rgba(139, 133, 125, 0.2);
+        }
+      </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="bg-surface dark:bg-surface-dim full-width top-0 sticky border-b border-secondary/20 dark:border-secondary-fixed-dim/20 z-50 transition-colors duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<!-- Mobile Menu Icon (Placeholder for functionality) -->
+<button class="md:hidden text-primary dark:text-primary-fixed-dim hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-8 items-center font-headline-md text-headline-md dark:text-on-surface">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors cursor-pointer transition-all ease-in-out" href="#">Shop</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 cursor-pointer transition-all ease-in-out" href="#">Collections</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors cursor-pointer transition-all ease-in-out" href="#">Our Story</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors cursor-pointer transition-all ease-in-out" href="#">Journal</a>
+</nav>
+<!-- Brand Logo -->
+<div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-medium text-primary dark:text-primary-fixed-dim tracking-tight">
+<img alt="Zaysee Store Logo" class="h-10 md:h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhb0NkgJl7viWISXRYwiISbTcaOgLko2qda0uMMf7R1Sq7asEehzUpe0qQb0a-tPpov-3cLkH0E-vr681KFheuW-NNOFnjSiONA6yghspYHVGOExr3fM3zZS97zEpdrjRCUi8i_bNd2z9gwGsjWp3-5LygegyYqBQHevGnsIPtE_RdFGGzFeVolOSIb1eLmp7MCyNQ2P6miG80wW6M-ERGpng7WOah7xsoFhkitkmUrH5wBXyLLJqn"/>
+</div>
+<!-- Trailing Icons -->
+<div class="flex gap-4 items-center">
+<button class="text-primary dark:text-primary-fixed-dim hover:scale-105 transition-transform duration-300 cursor-pointer transition-all ease-in-out">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-primary dark:text-primary-fixed-dim hover:scale-105 transition-transform duration-300 cursor-pointer transition-all ease-in-out">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="text-primary dark:text-primary-fixed-dim hover:scale-105 transition-transform duration-300 cursor-pointer transition-all ease-in-out relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary-container text-on-primary-container text-xs rounded-full h-4 w-4 flex items-center justify-center font-label-md">0</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content: Collections -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24">
+<!-- Page Header & Filter -->
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-24 gap-8">
+<div class="w-full md:w-1/2">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-4">Curated Living</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-lg">Objects selected with intention. Explore our latest collection of sustainable and thoughtfully crafted homewares.</p>
+</div>
+<div class="w-full md:w-auto flex items-center gap-6 filter-border-bottom pb-2">
+<div class="font-label-md text-label-md text-secondary uppercase tracking-widest cursor-pointer hover:text-primary transition-colors">All</div>
+<div class="font-label-md text-label-md text-primary uppercase tracking-widest border-b border-primary pb-1 cursor-pointer">Ceramics</div>
+<div class="font-label-md text-label-md text-secondary uppercase tracking-widest cursor-pointer hover:text-primary transition-colors">Textiles</div>
+<div class="font-label-md text-label-md text-secondary uppercase tracking-widest cursor-pointer hover:text-primary transition-colors flex items-center gap-1">
+                    Sort <span class="material-symbols-outlined text-[16px]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Asymmetric Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter md:gap-y-32 items-start">
+<!-- Product 1 (Large, spanning 7 cols) -->
+<div class="md:col-span-7 group product-card-border p-4 -m-4 rounded-lg">
+<a class="block" href="#">
+<div class="image-container rounded bg-surface-container-low aspect-[4/5] md:aspect-[16/9] mb-6 relative">
+<img class="w-full h-full object-cover rounded" data-alt="A softly lit, minimalist interior setting featuring a large, handcrafted ceramic vase with a matte, earthy beige finish. The vase sits on a light wooden table against an off-white wall, casting a gentle, diffused shadow. A single dried olive branch rests inside. The mood is calm, curated, and organic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlvDm3Wl0nQmpimvEL4FYMkATI1FiyAsuDgppA2TccSayWG4XEe9ObxbUJTFUdO03TmuIG7lxnQUmR4TPpl8uJ5EQm4o_gejCzB2hLs9CoyRYUs7c8CLeCkMP-AiCbpG2DrazoDsZ4CW-BvCOBcTgjM1DbhyMaeoFoaua75BGY8KZwuT28LqMv0ApgynitxuvdYHBjuKO_iNACKijCJEyF-5NYG0uLYPStP2VP-OifLwX9QjYyKM1Q"/>
+<div class="absolute top-4 left-4 bg-primary-container/90 text-on-primary-container font-label-md text-label-md px-3 py-1 rounded-xl shadow-sm backdrop-blur-sm">New Arrival</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Earthen Vessel</h3>
+<p class="font-body-md text-body-md text-secondary">Hand-thrown stoneware, unglazed finish.</p>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">$145</span>
+</div>
+</a>
+</div>
+<!-- Product 2 (Small, spanning 5 cols, offset slightly down) -->
+<div class="md:col-span-5 md:mt-24 group product-card-border p-4 -m-4 rounded-lg">
+<a class="block" href="#">
+<div class="image-container rounded bg-surface-container-low aspect-square mb-6">
+<img class="w-full h-full object-cover rounded" data-alt="Close-up shot of a set of linen napkins in muted sage green, folded neatly on a textured off-white stone surface. Soft, natural daylight highlights the organic weave and subtle imperfections of the fabric. The aesthetic is tactile, sustainable, and refined minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsjXE4Hzxu6HpoSGPdAGbJzKZYDRs-firWs8fMRqocGJYVNerWslrxOyXQHHC8ulJkUTER5x6pb9qw4avHQGKfkdCXnSrchoHsZglghHHcr0H7tLy-ueyrgzBpwv_9yjbkGSDTh21DhW7wGCK1U4fyLw1X1KvxqKUMZkeHC9TX7niiBJ6HrNZvzkCO_l-_ZGEf8rVgVijahYZXPMNMY1SSceY6JkNI4FshLQZqn5pEHPClEOPyFf1C"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Linen Napkin Set</h3>
+<p class="font-body-md text-body-md text-secondary">Organic French linen, set of four.</p>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">$48</span>
+</div>
+</a>
+</div>
+<!-- Product 3 (Medium, spanning 6 cols) -->
+<div class="md:col-span-6 group product-card-border p-4 -m-4 rounded-lg">
+<a class="block" href="#">
+<div class="image-container rounded bg-surface-container-low aspect-[3/4] mb-6">
+<img class="w-full h-full object-cover rounded" data-alt="A minimalist brass incense holder resting on a raw concrete tray. A thin wisp of smoke curls gently upwards against a clean, warm-grey background. The lighting is low-contrast and soft, emphasizing the quiet, meditative quality of the object. High-end lifestyle photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ13s_bPOiIkU9HuVMYEbrymPvRy3l5zBPxmOkJMLg7UC47uSAUcHGz0AiAANXYam_z_JZDDwJRY3KGXY3P81iCJ6rN-7Yb2haJaoFoBiyoj8nxZnicsvjwD34Zzl1KJvOqqAx8e8nxIaQvQr5Dh17pUUyY1_IGyZzpyVdI8snqx6hfb2t1rqyyg5G1gYFj3wl_33NEWPGhihNw9zgXpxmg-LmELemOyfZXC9rknuTIM_mM4wV5fG1"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Brass Incense Holder</h3>
+<p class="font-body-md text-body-md text-secondary">Solid machined brass, natural patina.</p>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">$32</span>
+</div>
+</a>
+</div>
+<!-- Product 4 (Medium, spanning 6 cols, offset slightly up) -->
+<div class="md:col-span-6 md:-mt-16 group product-card-border p-4 -m-4 rounded-lg">
+<a class="block" href="#">
+<div class="image-container rounded bg-surface-container-low aspect-square mb-6">
+<img class="w-full h-full object-cover rounded" data-alt="A stack of three shallow ceramic bowls in varying shades of charcoal and soft grey, placed on a pale oak surface. The bowls have a slightly irregular, handmade edge. The lighting is bright but diffused, creating soft shadows and highlighting the matte glaze texture. Modern, earthy minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl_7ST9riig9V5p4jlY8lYKZkNKX1xVM-PUNC9eaOs3wxIlAUesHfPcMSfC55dYLSerqWUDk042PgYe7vHwXd34L-qVBfAx14hinYeOak4Q1eoJyir4hx1pekNnLQcxDY6bG_5Lxl9I4n5DeCkZLz50HjJm3ZsgyJHqaSSf2d8scjpAMcIsBbq_d1ZwmPEy4yfMQGzkWfArHv0JOZXz7oUWsJjnD9nOGGXzPWUwDNdG8bhYnR9bES0"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Nesting Bowls</h3>
+<p class="font-body-md text-body-md text-secondary">Set of three, mixed ash glazes.</p>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">$85</span>
+</div>
+</a>
+</div>
+<!-- Full Width Editorial Break -->
+<div class="col-span-1 md:col-span-12 my-12 md:my-24 py-16 px-8 md:px-16 bg-surface-container-low border border-secondary/20 flex flex-col md:flex-row items-center gap-12 rounded-lg">
+<div class="w-full md:w-1/2">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">The Art of Slow Living</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-8">We believe in surrounding ourselves with objects that have a story. Pieces that grow more beautiful with time and use, crafted by artisans who respect their materials.</p>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-lg hover:bg-surface-tint transition-colors uppercase tracking-wider">Read Our Journal</button>
+</div>
+<div class="w-full md:w-1/2 h-64 md:h-96 image-container rounded">
+<img class="w-full h-full object-cover rounded" data-alt="A candid, atmospheric shot of an artisan's hands working wet clay on a potter's wheel. The workshop is bathed in dusty, golden afternoon light streaming through a window. Tools and raw materials are softly blurred in the background. The mood is authentic, focused, and deeply rooted in craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgiqSRZN3byILDKjyr0fDs6P82NgH-gwfxO0mc0T4Qa61pCSA7htyBY4HSubzD6lru8a1Q1Ey74VPk2wMuOzah0ynEAPvmQXyNJgHcKTYgCACDEVWVn9ZasdeVa_VaXBp4rUhT5h71GUWRlEOMUjdBWicReQR2wuvbOB2aJt8Dv2pJhL8omLwykNlsvuiDm82ZI_na2LFtX-lWCIpzeeYvb5D7NLun9jISrR5lh2KrQwa1r6qUhfvC"/>
+</div>
+</div>
+<!-- Product 5 (Small, spanning 4 cols) -->
+<div class="md:col-span-4 group product-card-border p-4 -m-4 rounded-lg">
+<a class="block" href="#">
+<div class="image-container rounded bg-surface-container-low aspect-[4/5] mb-6">
+<img class="w-full h-full object-cover rounded" data-alt="A delicate, hand-poured soy candle in a reusable amber glass jar, placed on a light marble coaster. The candle is unlit, with a clean cotton wick. The setting is bright, airy, and minimal, reflecting a clean beauty and home fragrance aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUPo1b21GpBx-OVMhiX_7NaDXrsWscewT5HECyXEpjjavF82_38mg6970lGMwZHNbPVwIAaGlM6aAnBhRCVgzMj6LlPNNvNr8_-EziwRzT_-klNYnpb4pJrzVOOcVjNuCKQoAHpgODNNbk7Khtf5TvWHc3qTVM7rbPgsaQzbCjKDXKPAPzwG-OptWjeTcGQlkjLeSMxE1I17es8OrAqZSk37eROgxnF4RuLeRbKElulWOq3-OUAmYu"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Amber Jar Candle</h3>
+<p class="font-body-md text-body-md text-secondary">Bergamot &amp; Vetiver, soy wax.</p>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">$28</span>
+</div>
+</a>
+</div>
+<!-- Product 6 (Large, spanning 8 cols, offset slightly down) -->
+<div class="md:col-span-8 md:mt-16 group product-card-border p-4 -m-4 rounded-lg">
+<a class="block" href="#">
+<div class="image-container rounded bg-surface-container-low aspect-video mb-6 relative">
+<img class="w-full h-full object-cover rounded" data-alt="A beautifully styled low-profile wooden bed frame covered in draped, washed linen bedding in tones of sand and oatmeal. A soft, hazy morning light filters through sheer curtains. The room is uncluttered, evoking a sense of deep calm and relaxed luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2eoVspzGVoX5sT1tNObi5o7tedab6eVE0pyAaVoZFl8W8isSNKM8HXuao7aJXK_AlUcvnPWEv8YiGbbZyHK8SXoHXUFU4UnOUJebt8FAA28WY_kcPEHvIiHFSSJo713qkeYI0XPLgbzeCCis53Ia6UVI4Whv24fyjRMLazSYc49CGIpoVB4W7MksLWUwodd_T9M4E6sBEqi8j-PCTb6zc9qsooqObR9AIAiXIY2dYSrK2SkKuvVtL"/>
+<div class="absolute top-4 left-4 bg-surface/90 text-on-surface font-label-md text-label-md px-3 py-1 rounded-xl shadow-sm border border-secondary/20 backdrop-blur-sm">Restocked</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Linen Duvet Cover</h3>
+<p class="font-body-md text-body-md text-secondary">Heavyweight European flax, garment washed.</p>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">$220</span>
+</div>
+</a>
+</div>
+</div>
+<!-- Load More Action -->
+<div class="flex justify-center mt-24">
+<button class="border border-secondary/40 text-on-surface font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-secondary/5 transition-colors uppercase tracking-widest bg-transparent">
+                Load More
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest full-width border-t border-secondary/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="flex flex-col justify-center items-start md:items-start mb-8 md:mb-0">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim mb-4 tracking-tight">
+<img alt="Zaysee Store Logo" class="h-8 w-auto object-contain grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhb0NkgJl7viWISXRYwiISbTcaOgLko2qda0uMMf7R1Sq7asEehzUpe0qQb0a-tPpov-3cLkH0E-vr681KFheuW-NNOFnjSiONA6yghspYHVGOExr3fM3zZS97zEpdrjRCUi8i_bNd2z9gwGsjWp3-5LygegyYqBQHevGnsIPtE_RdFGGzFeVolOSIb1eLmp7MCyNQ2P6miG80wW6M-ERGpng7WOah7xsoFhkitkmUrH5wBXyLLJqn"/>
+</div>
+<p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim max-w-xs">
+                    Curating objects for a slower, more intentional way of living.
+                </p>
+</div>
+<div class="flex flex-col gap-4 font-body-md text-body-md">
+<a class="text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary hover:opacity-80 transition-all duration-200" href="#">Shipping &amp; Returns</a>
+<a class="text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary hover:opacity-80 transition-all duration-200" href="#">Sustainability</a>
+<a class="text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary hover:opacity-80 transition-all duration-200" href="#">Stockists</a>
+<a class="text-on-secondary-container dark:text-secondary-fixed-dim hover:text-primary hover:opacity-80 transition-all duration-200" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col justify-end md:items-end mt-8 md:mt-0">
+<p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim">
+                    © 2024 Zaysee Store. Curated with intention.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>
