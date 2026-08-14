@@ -7,6 +7,10 @@ export default function SecurityCheck() {
   const [rayId, setRayId] = useState('');
 
   useEffect(() => {
+    // Set tab title to "Just a moment..." during verification
+    const originalTitle = document.title;
+    document.title = 'Just a moment...';
+
     // Generate random Cloudflare Ray ID
     const randomRay = Math.random().toString(36).substring(2, 12) + Math.random().toString(36).substring(2, 8);
     setRayId(randomRay);
@@ -16,21 +20,25 @@ export default function SecurityCheck() {
       setVerifying(false);
       setTimeout(() => {
         setVerified(true);
-      }, 600);
+        document.title = originalTitle;
+      }, 500);
     }, 1800);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      document.title = originalTitle;
+    };
   }, []);
 
   if (verified) return null;
 
   return (
-    <div className={`security-overlay${verified ? ' verified' : ''}`}>
+    <div className="security-overlay">
       <div className="security-box">
         <h1 className="security-domain">zstore.zaysee.my.id</h1>
-        <h2 className="security-title">Melakukan verifikasi keamanan</h2>
+        <h2 className="security-title">Performing security verification</h2>
         <p className="security-desc">
-          Situs web menggunakan layanan keamanan untuk melindungi dari bot jahat. Halaman ini ditunjukkan semasa kami memverifikasi bahwa Anda bukan bot.
+          This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.
         </p>
 
         <div className="security-widget-card">
@@ -38,12 +46,12 @@ export default function SecurityCheck() {
             {verifying ? (
               <div className="cf-spinner-row">
                 <div className="cf-spinner"></div>
-                <span className="cf-status-text">Melakukan verifikasi...</span>
+                <span className="cf-status-text">Verifying...</span>
               </div>
             ) : (
               <div className="cf-success-row">
                 <div className="cf-check-icon">✓</div>
-                <span className="cf-status-text success">Verifikasi Berhasil</span>
+                <span className="cf-status-text success">Verification Success</span>
               </div>
             )}
             <div className="cf-brand">
@@ -52,7 +60,7 @@ export default function SecurityCheck() {
               </svg>
               <div className="cf-brand-text">
                 <strong>CLOUDFLARE</strong>
-                <span>Privasi · Bantuan</span>
+                <span>Privacy · Help</span>
               </div>
             </div>
           </div>
@@ -60,7 +68,7 @@ export default function SecurityCheck() {
 
         <div className="security-footer">
           <p>Ray ID: <code>{rayId}</code></p>
-          <p>Performa dan Keamanan dari <a href="https://www.cloudflare.com" target="_blank" rel="noreferrer">Cloudflare</a> · <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noreferrer">Privasi</a></p>
+          <p>Performance and Security by <a href="https://www.cloudflare.com" target="_blank" rel="noreferrer">Cloudflare</a> | <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noreferrer">Privacy</a></p>
         </div>
       </div>
     </div>
